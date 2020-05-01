@@ -2,8 +2,6 @@
 
 This simple tutorial for arduino will show you how to read the values from a thumb joystick. Due to the nature of ADC (Analogue to Digital Conversion) and depending upon the sensitivity of your device, the values may be seeen to be constantly changing. This tutorial includes solution to 'smooth' those readings to make the joystick more friendly to our projects.
 
-
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -41,11 +39,22 @@ The button on our stick connects the output pin to GND when pressed and leaves t
 6. Open the serial monitor to view the values
 7. Wiggle your stick and see the values change
 
-## Test On
+## Tested On
 
-ESP32 
+ESP32 dev kit
 
 Please let us know if you test this on other devices so we can add to the list and acknowledge your contribution!
+
+## Trouble Shooting
+
+### Serial is connected but I don't see any values
+1. Are the correct pin numbers in the code? (be careful not to mix up GPIO numbers and physical pin numbers)
+2. Is the +ve pin on the joystick connected to the correct voltage to match the analogue pins in use?
+
+### Joystick is not being moved, but values are still changing 
+1. Is the pull up resistor connected to the switch pin? The values are output if the switch is pressed even if the stick hasn't moved far enough
+2. Is the device connected to a 'noisy' power supply which is causing votlage fluctuations, or are other nearby devices possibly causing interferrence
+3. Joystick quality or even simple loose connections can also cause fluctuationsin the votlage reaching the ADC pins
 
 ## License
 
