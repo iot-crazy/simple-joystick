@@ -32,6 +32,11 @@ You will already know:
 6. Open the serial monitor to view the values
 7. Wiggle your stick and see the values change
 
+## Test On
+
+ESP32 
+
+Please let us know if you test this on other devices so we can add to the list and acknowledge your contribution!
 
 ## License
 
