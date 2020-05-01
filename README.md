@@ -2,7 +2,7 @@
 
 This simple tutorial for arduino will show you how to read the values from a thumb joystick. Due to the nature of ADC (Analogue to Digital Conversion) and depending upon the sensitivity of your device, the values may be seeen to be constantly changing. This tutorial includes solution to 'smooth' those readings to make the joystick more friendly to our projects.
 
-Please note that many of the cheaper thumb sticks available are also not particularly good quality and we find that the reisitance across the aces are not always linear and also reach min / max values a long way before the end of the stick travel. 
+
 
 ## Getting Started
 
@@ -22,6 +22,13 @@ You will already know:
 1. How to use the Arduino IDE (or IDE of your choice)
 2. How to upload sketches / code to your device
 3. How to open the serial monitor
+
+### Notes about thumb joysticks
+
+Many of the cheaper thumb sticks available are also not particularly good quality and we find that the reisitance across the aces are not always linear and also reach min / max values a long way before the end of the stick travel. 
+We have also seen that some have a pin labelled '5v', however, some devices, such as the ESP8366 allow a maximum of 3.3v on the ADC pin and voltages above this will cause unexpected results and may damage the device. Please connect the '5v' pin to the appropriate voltage for your ADC device. On the ESP32, we use the 3.3v line.
+
+The button on our stick connects the output pin to GND when pressed and leaves the pin floating when not pressed which resulted in constantly changing values on the digital pin. For this reason we recommend a 10kΩ resistor from the button pin to +ve (we used the 3.3v line again).
 
 
 ### Installing
