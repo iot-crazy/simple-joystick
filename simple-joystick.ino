@@ -1,4 +1,5 @@
-
+// IoT Crazy 2020
+// Simple joystick tutorial with smoothing
 
 // Which pins the joystick is connected to
 int JoyStick_X = 36; // x
