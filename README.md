@@ -2,6 +2,8 @@
 
 This simple tutorial for arduino will show you how to read the values from a thumb joystick. Due to the nature of ADC (Analogue to Digital Conversion) and depending upon the sensitivity of your device, the values may be seeen to be constantly changing. This tutorial includes solution to 'smooth' those readings to make the joystick more friendly to our projects.
 
+Please note that many of the cheaper thumb sticks available are also not particularly good quality and we find that the reisitance across the aces are not always linear and also reach min / max values a long way before the end of the stick travel. 
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
